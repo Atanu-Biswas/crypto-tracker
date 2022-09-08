@@ -1,15 +1,21 @@
 const form = document.querySelector('#searchForm');
-const res = document.querySelector('#resultTable')
+const res = document.querySelector('#resultTable');
+const allcons = document.getElementById("allcons");
 var update;
 
 form.addEventListener('submit',(e)=>{
     e.preventDefault();
-    if(update){
+    
+    if (update){
         clearTimeout(update);
     }
+
     const ctype = form.elements.coinType.value;
     const currency = form.elements.currType.value;
-       
+    
+    allcons.classList.add('mainClick');
+    allcons.classList.remove('main'); 
+
     fetchDetails(currency,ctype);
 
 });
@@ -21,7 +27,7 @@ const fetchDetails= async (currency,ctype) => {
 };
 
 const showPrice= (coinData) => {
-    console.log("called");
+   
     const price = coinData.price;
     const priceChange=coinData.priceChange1h;
     const totalSupplys = coinData.totalSupply;
@@ -50,5 +56,5 @@ const showPrice= (coinData) => {
     </tbody>
 </table>
     `
-    update= setTimeout(()=>fetchDetails(currency,form.elements.coinType.value),10000);
+    update= setTimeout(()=>fetchDetails(currency,ctype),30000);
 }
