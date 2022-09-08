@@ -6,17 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_main.css">
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/tylim88/crypto-symbol/master/img/symbol.png">
-    
-    <title>Crypto Traker</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/css/demo.css'><link rel="stylesheet" href="./style.css">
+
+    <title>Crypto Tracker</title>
 </head>
 <body>
-    <div class="bg"></div>
+  <div class="bg">
+  <div id="large-header" class="large-header">
+  <canvas id="demo-canvas"></canvas>
+    
+</div>
+</div>
+
     <div class="cont">
     <div class="py-3 bg-purple-800 text-2xl flex justify-center border-dashed border-2 border-black">
         <div class="head text-white font-bold">
-            <span>Crypto Traker</span>
+            <span>Crypto Tracker</span>
         </div>
       
     </div>
@@ -48,7 +56,7 @@
                     
                 </select>
             </div>
-                <button type="submit" class="my-2 px-1 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded ">Get Price</button>
+                <button type="submit" class="my-2 px-2 py-1 rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ...">Get Price</button>
         </form>
     </div>
     </div>
@@ -171,6 +179,11 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="app.js"></script>
+    <script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js'></script>
+<script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js'></script>
+<script src='https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js'></script><script  src="./script.js"></script>
+
+    
     <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: 'd09e30e4-bddf-4317-88d2-0193adbb1059', f: true }); done = true; } }; })();</script>
 </body>
 </html>
